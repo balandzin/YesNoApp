@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var answerLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,4 +28,3 @@ class ViewController: UIViewController {
         }
     }
 }
-
