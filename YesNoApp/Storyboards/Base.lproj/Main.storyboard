@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adQ-Ai-EUJ">
-                                <rect key="frame" x="202.66666666666663" y="787.66666666666663" width="175.33333333333337" height="54.333333333333371"/>
+                                <rect key="frame" x="212.66666666666663" y="797.66666666666663" width="175.33333333333337" height="54.333333333333371"/>
                                 <color key="backgroundColor" name="ColorButton"/>
                                 <color key="tintColor" red="0.074509806930000005" green="0.05882352591" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -49,9 +49,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="adQ-Ai-EUJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="JWX-ZW-yz6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adQ-Ai-EUJ" secondAttribute="trailing" constant="50" id="KwL-vc-4yY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adQ-Ai-EUJ" secondAttribute="trailing" constant="40" id="KwL-vc-4yY"/>
                             <constraint firstItem="Gzc-TQ-tcP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O9m-Cp-KYY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adQ-Ai-EUJ" secondAttribute="bottom" constant="50" id="R4V-1y-2Ht"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adQ-Ai-EUJ" secondAttribute="bottom" constant="40" id="R4V-1y-2Ht"/>
                             <constraint firstItem="Gzc-TQ-tcP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RwS-N5-hrx"/>
                             <constraint firstAttribute="trailing" secondItem="Gzc-TQ-tcP" secondAttribute="trailing" id="bgU-CE-rhn"/>
                             <constraint firstItem="uh7-3P-RTF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="czb-4Y-rOf"/>
