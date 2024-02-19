@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var answerLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.answerLabel.text = answer ? "Yes" : "No"
+            self.imageView.image = answer ? UIImage(named: "Yes") : UIImage(named: "No")
         }
     }
 }
