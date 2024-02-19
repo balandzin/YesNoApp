@@ -8,12 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var answerLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        answerLabel.text = ""
     }
 
 
+    @IBAction func answerButtonAction() {
+        let answer = Bool.random()
+        
+        answerLabel.text = ""
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.answerLabel.text = answer ? "Yes" : "No"
+        }
+    }
 }
 

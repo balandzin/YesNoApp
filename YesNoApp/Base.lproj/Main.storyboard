@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YesNoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Gzc-TQ-tcP">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh7-3P-RTF">
+                                <rect key="frame" x="214" y="463" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="100"/>
+                                <color key="textColor" name="ColorButton"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adQ-Ai-EUJ">
+                                <rect key="frame" x="202.66666666666663" y="787.66666666666663" width="175.33333333333337" height="54.333333333333371"/>
+                                <color key="backgroundColor" name="ColorButton"/>
+                                <color key="tintColor" red="0.074509806930000005" green="0.05882352591" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Get Answer">
+                                    <fontDescription key="titleFontDescription" name="Impact" family="Impact" pointSize="33"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="answerButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSu-0q-ZWu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="adQ-Ai-EUJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="JWX-ZW-yz6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adQ-Ai-EUJ" secondAttribute="trailing" constant="50" id="KwL-vc-4yY"/>
+                            <constraint firstItem="Gzc-TQ-tcP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="O9m-Cp-KYY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adQ-Ai-EUJ" secondAttribute="bottom" constant="50" id="R4V-1y-2Ht"/>
+                            <constraint firstItem="Gzc-TQ-tcP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RwS-N5-hrx"/>
+                            <constraint firstAttribute="trailing" secondItem="Gzc-TQ-tcP" secondAttribute="trailing" id="bgU-CE-rhn"/>
+                            <constraint firstItem="uh7-3P-RTF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="czb-4Y-rOf"/>
+                            <constraint firstItem="uh7-3P-RTF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jgl-xe-xYZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Gzc-TQ-tcP" secondAttribute="bottom" id="znh-L3-u6e"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="uh7-3P-RTF" id="ilk-9l-I8j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="110.68702290076335" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="2560" height="1440"/>
+        <namedColor name="ColorButton">
+            <color red="0.69411764705882351" green="0.75686274509803919" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
