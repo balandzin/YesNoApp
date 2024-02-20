@@ -20,6 +20,7 @@ final class AnswerViewController: UIViewController {
         setValues()
         
         answerLabel.text = ""
+        imageView.image = nil
     }
     
     
