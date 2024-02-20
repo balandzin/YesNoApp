@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class AnswerViewController: UIViewController {
     
     @IBOutlet var answerLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
