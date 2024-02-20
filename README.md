@@ -12,7 +12,7 @@ YesNo основано на простом, но эффективном алго
 - [ ] Произвести рефакторинг
 
 <img width="492" alt="Снимок экрана 2024-02-20 в 21 46 30" src="https://github.com/balandzin/YesNoApp/assets/113136992/d0ebd510-aa06-4a0b-9807-37c8ffb781f1">
-<img width="492" alt="Снимок экрана 2024-02-20 в 21 47 08" src="https://github.com/balandzin/YesNoApp/assets/113136992/9e5a2eb2-3b64-45fc-86b0-39fb86f491a5">
+<img width="492" alt="Снимок экрана 2024-02-20 в 21 46 57" src="https://github.com/balandzin/YesNoApp/assets/113136992/9bfaab73-74a0-4c84-9e58-74640917010a">
 
 ## Команда проекта
 Чтобы связаться с разработчиком приложения, воспользуйтесь ссылкой на Telegram:
