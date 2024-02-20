@@ -37,6 +37,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adQ-Ai-EUJ">
                                 <rect key="frame" x="212.66666666666663" y="797.66666666666663" width="175.33333333333337" height="54.333333333333371"/>
                                 <color key="backgroundColor" name="ColorButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175.33333333333337" id="3Oh-e8-pnI"/>
+                                </constraints>
                                 <color key="tintColor" red="0.074509806930000005" green="0.05882352591" blue="0.48627454040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Get Answer">
@@ -51,6 +54,19 @@
                                     <action selector="answerButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSu-0q-ZWu"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TGf-nN-Ea6">
+                                <rect key="frame" x="333" y="111" width="75" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="LvN-6H-2MV"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="🇷🇺"/>
+                                    <segment title="🇬🇧"/>
+                                </segments>
+                                <connections>
+                                    <action selector="LanguageSCAction" destination="BYZ-38-t0r" eventType="valueChanged" id="s2w-LC-LoY"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,7 +75,9 @@
                             <constraint firstItem="0Aj-5J-1QV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5CL-wA-kRf"/>
                             <constraint firstItem="adQ-Ai-EUJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="JWX-ZW-yz6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adQ-Ai-EUJ" secondAttribute="trailing" constant="40" id="KwL-vc-4yY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TGf-nN-Ea6" secondAttribute="trailing" constant="20" id="O5Z-lE-g94"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="adQ-Ai-EUJ" secondAttribute="bottom" constant="40" id="R4V-1y-2Ht"/>
+                            <constraint firstItem="TGf-nN-Ea6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="U3r-ci-aSe"/>
                             <constraint firstItem="1fc-yL-eT4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="VYd-Ss-gKK"/>
                             <constraint firstItem="uh7-3P-RTF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="czb-4Y-rOf"/>
                             <constraint firstItem="0Aj-5J-1QV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hNr-YF-2gw"/>
@@ -77,8 +95,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="answerButton" destination="adQ-Ai-EUJ" id="lKF-OG-1Nt"/>
                         <outlet property="answerLabel" destination="uh7-3P-RTF" id="ilk-9l-I8j"/>
                         <outlet property="imageView" destination="1fc-yL-eT4" id="Ssw-Kc-r8U"/>
+                        <outlet property="languageSegmentedControl" destination="TGf-nN-Ea6" id="Qja-Fv-rVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -93,9 +113,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-Xg-dr6">
-                                <rect key="frame" x="-9" y="0.0" width="437" height="926"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-Xg-dr6">
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bXW-aL-esV">
                                 <rect key="frame" x="184.66666666666666" y="429" width="59" height="68"/>
@@ -118,6 +137,10 @@
                         <viewLayoutGuide key="safeArea" id="IuY-cp-tCu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hpx-Xg-dr6" firstAttribute="top" secondItem="fAg-ic-kMF" secondAttribute="top" id="0YY-Ja-Xdx"/>
+                            <constraint firstItem="hpx-Xg-dr6" firstAttribute="trailing" secondItem="fAg-ic-kMF" secondAttribute="trailing" id="2Xt-7p-mr4"/>
+                            <constraint firstAttribute="bottom" secondItem="hpx-Xg-dr6" secondAttribute="bottom" id="KJM-Nf-db8"/>
+                            <constraint firstItem="hpx-Xg-dr6" firstAttribute="leading" secondItem="fAg-ic-kMF" secondAttribute="leading" id="Tmh-Qm-Vo6"/>
                             <constraint firstItem="bXW-aL-esV" firstAttribute="centerY" secondItem="fAg-ic-kMF" secondAttribute="centerY" id="Vme-Ik-tZY"/>
                             <constraint firstItem="bXW-aL-esV" firstAttribute="centerX" secondItem="fAg-ic-kMF" secondAttribute="centerX" id="sdY-wR-qZH"/>
                         </constraints>
